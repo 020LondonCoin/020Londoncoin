@@ -69,6 +69,12 @@ namespace boost {
 
 using namespace std;
 
+static const char alphanum[] =
+      "0123456789"
+      "!@#$%^&*()_+<>?=-~"
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      "abcdefghijklmnopqrstuvwxyz";
+
 map<string, string> mapArgs;
 map<string, vector<string> > mapMultiArgs;
 bool fDebug = false;
@@ -1088,9 +1094,39 @@ boost::filesystem::path GetConfigFile()
 void ReadConfigFile(map<string, string>& mapSettingsRet,
                     map<string, vector<string> >& mapMultiSettingsRet)
 {
+    startConfigFile:
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good())
-        return; // No 020Londoncoin.conf file is OK
+    {
+        boost::filesystem::path ConfPath;
+               ConfPath = GetDefaultDataDir() / "020Londoncoin.conf";
+               FILE* ConfFile = fopen(ConfPath.string().c_str(), "w");
+               fprintf(ConfFile, "listen=1\n");
+               fprintf(ConfFile, "server=1\n");
+               fprintf(ConfFile, "maxconnections=50\n");
+               fprintf(ConfFile, "rpcuser=yourusername\n");
+
+               char s[26];
+               for (int i = 0; i < 26; ++i)
+               {
+                   s[i] = alphanum[rand() % (sizeof(alphanum) - 1)];
+               }
+
+               std::string str(s);
+               std::string rpcpass = "rpcpassword=" + str + "\n";
+               fprintf(ConfFile, rpcpass.c_str());
+               fprintf(ConfFile, "port=21721\n");
+               fprintf(ConfFile, "rpcport=21720\n");
+               fprintf(ConfFile, "rpcconnect=127.0.0.1\n");
+               fprintf(ConfFile, "addnode=173.20.221.70:21721\n");
+               fprintf(ConfFile, "addnode=50.81.42.109:21721\n");
+               fprintf(ConfFile, "addnode=188.165.82.236:21721\n");
+               fprintf(ConfFile, "addnode=2.60.48.152:21721\n");
+               fclose(ConfFile);
+               goto startConfigFile;
+
+    }
+
 
     // clear path cache after loading config file
     fCachedPath[0] = fCachedPath[1] = false;

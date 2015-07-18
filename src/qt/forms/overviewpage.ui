@@ -143,7 +143,7 @@
         <enum>QFrame::Raised</enum>
        </property>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="6" column="0">
+        <item row="7" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <item>
            <widget class="QLabel" name="label_2">
@@ -178,7 +178,7 @@
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>30</height>
+            <height>25</height>
            </size>
           </property>
           <property name="cursor">
@@ -194,14 +194,14 @@ color: rgb(255, 255, 255);</string>
           </property>
          </widget>
         </item>
-        <item row="10" column="0">
+        <item row="11" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QPushButton" name="pushButton_3">
             <property name="minimumSize">
              <size>
               <width>40</width>
-              <height>40</height>
+              <height>35</height>
              </size>
             </property>
             <property name="maximumSize">
@@ -228,7 +228,7 @@ color: rgb(255, 255, 255);</string>
             <property name="minimumSize">
              <size>
               <width>75</width>
-              <height>45</height>
+              <height>35</height>
              </size>
             </property>
             <property name="maximumSize">
@@ -251,6 +251,30 @@ color: rgb(255, 255, 255);</string>
            </widget>
           </item>
          </layout>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>10</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(34, 34, 34);
+selection-background-color: rgb(0, 85, 127);
+color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>BitcoinTalk Thread</string>
+          </property>
+         </widget>
         </item>
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -303,7 +327,7 @@ color: rgb(255, 255, 255);</string>
           <property name="minimumSize">
            <size>
             <width>10</width>
-            <height>30</height>
+            <height>25</height>
            </size>
           </property>
           <property name="cursor">
@@ -323,27 +347,16 @@ color: rgb(255, 255, 255);</string>
           </property>
          </widget>
         </item>
-        <item row="4" column="0">
-         <widget class="QPushButton" name="pushButton_2">
-          <property name="enabled">
-           <bool>true</bool>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>10</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="cursor">
-           <cursorShape>PointingHandCursor</cursorShape>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(34, 34, 34);
-selection-background-color: rgb(0, 85, 127);
-color: rgb(255, 255, 255);</string>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
           </property>
           <property name="text">
-           <string>BitcoinTalk Thread</string>
+           <string>Resources</string>
           </property>
          </widget>
         </item>
@@ -441,16 +454,24 @@ color: rgb(255, 255, 255);</string>
           </item>
          </layout>
         </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_6">
-          <property name="font">
-           <font>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
+        <item row="6" column="0">
+         <widget class="QPushButton" name="pushButton_6">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(34, 34, 34);
+selection-background-color: rgb(0, 85, 127);
+color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
-           <string>Resources</string>
+           <string>Block Explorer</string>
           </property>
          </widget>
         </item>
@@ -460,6 +481,7 @@ color: rgb(255, 255, 255);</string>
        <zorder>pushButton_2</zorder>
        <zorder>label_6</zorder>
        <zorder>pushButton_5</zorder>
+       <zorder>pushButton_6</zorder>
       </widget>
      </item>
      <item>

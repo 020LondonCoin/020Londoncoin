@@ -246,3 +246,10 @@ void OverviewPage::on_pushButton_5_clicked()
     QString link="https://www.cryptopia.co.nz/";
     QDesktopServices::openUrl(QUrl(link));
 }
+
+void OverviewPage::on_pushButton_6_clicked()
+{
+
+    QString link="http://cryptobe.com/chain/020LondonCoin";
+    QDesktopServices::openUrl(QUrl(link));
+}
