@@ -1084,17 +1084,18 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
     return path;
 }
 
-boost::filesystem::path GetConfigFile()
-{
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "020Londoncoin.conf"));
-    if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
-    return pathConfigFile;
-}
+ boost::filesystem::path GetConfigFile()
+ {
+     boost::filesystem::path pathConfigFile(GetArg("-conf", "020Londoncoin.conf"));
+     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(true) / pathConfigFile;
+     return pathConfigFile;
+ }
 
 void ReadConfigFile(map<string, string>& mapSettingsRet,
                     map<string, vector<string> >& mapMultiSettingsRet)
 {
-    startConfigFile:
+    // Failed loop referance, To be removed in next update "V0.9.0.2"
+    // startConfigFile:
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good())
     {
@@ -1119,14 +1120,22 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
                fprintf(ConfFile, "rpcport=21720\n");
                fprintf(ConfFile, "rpcconnect=127.0.0.1\n");
                fprintf(ConfFile, "addnode=173.20.221.70:21721\n");
-               fprintf(ConfFile, "addnode=50.81.42.109:21721\n");
+               fprintf(ConfFile, "addnode=50.81.42.62:21721\n");
                fprintf(ConfFile, "addnode=188.165.82.236:21721\n");
-               fprintf(ConfFile, "addnode=2.60.48.152:21721\n");
+               fprintf(ConfFile, "addnode=46.101.224.176:21721\n");
+               fprintf(ConfFile, "addnode=128.199.82.183:21721\n");
+               fprintf(ConfFile, "addnode=46.101.19.150:21721\n");
+               fprintf(ConfFile, "addnode=178.62.130.89:21721\n");
+               fprintf(ConfFile, "addnode=104.131.121.211:21721\n");
+               fprintf(ConfFile, "addnode=162.243.147.101:21721\n");
+               fprintf(ConfFile, "addnode=188.166.60.96:21721\n");
                fclose(ConfFile);
-               goto startConfigFile;
-
+               // Returns our config path, created config file is NOT loaded first time...
+               // Wallet will need to be reloaded before config file is properly read...
+               return ;
+               // Failed loop referance, To be removed in next update "V0.9.0.2"
+               // goto startConfigFile;
     }
-
 
     // clear path cache after loading config file
     fCachedPath[0] = fCachedPath[1] = false;

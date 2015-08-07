@@ -1096,6 +1096,8 @@ uint256 static GetOrphanRoot(const CBlockHeader* pblock)
 static const int64 nGenesisBlockRewardCoin = 1 * COIN;
 static const int64 nBlockRewardStartCoin = 1000000 * COIN;
 static const int64 nBlockRewardMinimumCoin = 10000 * COIN;
+static const int64 nBlockRewardMineoutCoin = 0.005 * COIN; // ~2,500 yearly newly minted
+                                                           //(Interest paid to miners as a reward)
 
 static const int64 nTargetTimespan = 7200; // about 2 hours.
 static const int64 nTargetSpacing = 60; // 60 seconds, 1 minute.
@@ -1117,6 +1119,11 @@ int64 static GetBlockValue(int nHeight, int64 nFees, unsigned int nBits)
 	if (nSubsidy < nBlockRewardMinimumCoin) {
 		nSubsidy = nBlockRewardMinimumCoin;
 	}
+
+    // Mineout Reward, starting at block 6,030,200 reward = 0.005 perBlock (starts @ 200Billion)
+   if (nHeight >= 6030200) {
+       nSubsidy = nBlockRewardMineoutCoin;
+   }
 
 	//premined 1% for dev, support, bounty, and giveaway etc.
 	if(nHeight > 9 && nHeight < 40) {

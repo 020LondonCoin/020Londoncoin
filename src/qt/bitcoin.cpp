@@ -146,11 +146,19 @@ int main(int argc, char *argv[])
                               QString("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
     }
-    ReadConfigFile(mapArgs, mapMultiArgs);
-	// Add static ip of our clients.
-	mapMultiArgs["-addnode"].push_back("144.214.137.20");
-	mapMultiArgs["-addnode"].push_back("144.214.137.24");
-
+     ReadConfigFile(mapArgs, mapMultiArgs);
+    // Add Daemon config settings - Also gets us connected for initial launch (before config file takes effect)
+     mapMultiArgs["-addnode"].push_back("50.81.42.62:21721");
+     mapMultiArgs["-addnode"].push_back("173.20.221.70:21721");
+     mapMultiArgs["-addnode"].push_back("46.101.19.150:21721");
+     mapMultiArgs["-addnode"].push_back("178.62.130.89:21721");
+     mapMultiArgs["-addnode"].push_back("104.236.98.147:21721");
+     mapMultiArgs["-addnode"].push_back("128.199.82.183:21721");
+     mapMultiArgs["-addnode"].push_back("188.166.60.96:21721");
+     mapMultiArgs["-addnode"].push_back("173.20.221.70:21721");
+     mapMultiArgs["-addnode"].push_back("162.243.147.101:21721");
+     mapMultiArgs["-addnode"].push_back("104.131.121.211:21721");
+     mapMultiArgs["-addnode"].push_back("46.101.224.176:21721");
 
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
