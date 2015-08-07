@@ -1,5 +1,5 @@
 020londoncoin 0.9.0.2 BETA
-====================
+=======
 
 Copyright (c) 2009-2013 Bitcoin Developers
 Copyright (c) 2013-2014 o2oCoin Developers
