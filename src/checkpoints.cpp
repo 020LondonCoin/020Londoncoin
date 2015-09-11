@@ -39,15 +39,19 @@ namespace Checkpoints
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
         ( 0,     uint256("0x0000034bc8e2ae50d89d5c36d61300d3deacc96f875d66bc96bf6d725247167c"))
-        ( 1,     uint256("0x000000025e50ffab4dfb7ef38f3be564e57129e00f5fe8acc4aaedda7bd85046"))
-        ( 2,     uint256("0x00000006067895623accdb19cb5b764bbea59386f66dff236640d2bdda1469ef"))
-        ( 3,     uint256("0x00000005bf7e456818edbd42845b4e7c93d5b575313180ea600a1cbf5cc5c894"))
-        ( 4,     uint256("0x00000004f8736c559e67bf97ae07c4c95f19ed38a6c0097cbfef9ff037d820fd"))
-            ;
+        ( 10000,     uint256("0x0000000116b596ece0809767e3f7dd4358ff4ddfba5d3274fae810474ff872a2"))
+        ( 100000,     uint256("0x0000001163daab21c4242a14c1de239e7919a1a2864edce38acd0dc84ff80b08"))
+        ( 200000,     uint256("0x000000136e817a8e6e17ab4a3fab3cb38de586d37c8e6a871fecdebf1b7d979f"))
+        ( 350000,     uint256("0x0000001a13387d67d98c26fc53fe0a136bae2af1fe4502dc53f48d44bcbaad27"))
+        ( 486000,     uint256("0x00000091f06fbbb4bf1357e294c13b10502a7c4dc138ed1a44a045697d88379e"))
+        ( 525000,     uint256("0x00000a7e2b598d785dbce16c6cbaf59df0920f36bcff26c97aa43b7d4fa4a822"))
+        ( 638000,     uint256("0x000000091c7e4602bb6f5d106891309790cb1165e06cc768b9a6e26e87ae4418"))
+        ( 744044,     uint256("0x00000001124a35d1943fe2ca894c673a8b06bf7baf40b16cdca2891bf67e6507"))
+        ;
     static const CCheckpointData data = {
         &mapCheckpoints,
-        1441494709, // * UNIX timestamp of last checkpoint block (Genesis: 1388281113)
-        752035,     // * total number of transactions between genesis and last checkpoint (Genesis: 156464)
+        1441984477, // * UNIX timestamp of last checkpoint block (Genesis: 1388281113)
+        762404,     // * total number of transactions between genesis and last checkpoint (Genesis: 156464)
                     //   (the tx=... number in the SetBestChain debug.log lines)
         2880.0      // * estimated number of transactions per day after checkpoint
     };
