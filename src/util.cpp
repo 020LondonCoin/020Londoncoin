@@ -1094,7 +1094,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 void ReadConfigFile(map<string, string>& mapSettingsRet,
                     map<string, vector<string> >& mapMultiSettingsRet)
 {
-    // Failed loop referance, To be removed in next update "V0.9.0.2"
+    // Failed loop referance, To be removed in next update "V0.9.0.5"
     // startConfigFile:
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good())
@@ -1120,20 +1120,25 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
                fprintf(ConfFile, "rpcport=21720\n");
                fprintf(ConfFile, "rpcconnect=127.0.0.1\n");
                fprintf(ConfFile, "addnode=173.20.221.70:21721\n");
-               fprintf(ConfFile, "addnode=50.81.42.62:21721\n");
-               fprintf(ConfFile, "addnode=188.165.82.236:21721\n");
+               fprintf(ConfFile, "addnode=192.241.235.239:21721\n");
                fprintf(ConfFile, "addnode=46.101.224.176:21721\n");
                fprintf(ConfFile, "addnode=128.199.82.183:21721\n");
-               fprintf(ConfFile, "addnode=46.101.19.150:21721\n");
+               fprintf(ConfFile, "addnode=46.101.63.107:21721\n");
                fprintf(ConfFile, "addnode=178.62.130.89:21721\n");
                fprintf(ConfFile, "addnode=104.131.121.211:21721\n");
                fprintf(ConfFile, "addnode=162.243.147.101:21721\n");
                fprintf(ConfFile, "addnode=188.166.60.96:21721\n");
+               fprintf(ConfFile, "addnode=198.199.80.145:21721\n");
+               fprintf(ConfFile, "addnode=104.131.121.211:21721\n");
+               fprintf(ConfFile, "addnode=46.101.19.150:21721\n");
+               fprintf(ConfFile, "addnode=159.203.3.25:21721\n");
+               fprintf(ConfFile, "addnode=159.203.14.27:21721\n");
+
                fclose(ConfFile);
                // Returns our config path, created config file is NOT loaded first time...
                // Wallet will need to be reloaded before config file is properly read...
                return ;
-               // Failed loop referance, To be removed in next update "V0.9.0.2"
+               // Failed loop referance, To be removed in next update "V0.9.0.5"
                // goto startConfigFile;
     }
 
