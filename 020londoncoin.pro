@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = 020londoncoin-qt
 macx:TARGET = "020londoncoin-Qt"
-VERSION = 0.9.0.5
+VERSION = 0.9.0.4
 INCLUDEPATH += src src/json src/qt
 QT += core gui widgets network
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
@@ -20,7 +20,7 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 }
 
 win32{
-BOOST_LIB_SUFFIX=-mgw52-mt-s-1_57
+BOOST_LIB_SUFFIX=-mgw49-mt-s-1_57
 BOOST_INCLUDE_PATH=C:/deps/boost_1_57_0
 BOOST_LIB_PATH=C:/deps/boost_1_57_0/stage/lib
 BDB_INCLUDE_PATH=C:/deps/db-6.1.26.NC/build_unix
@@ -28,7 +28,7 @@ BDB_LIB_PATH=C:/deps/db-6.1.26.NC/build_unix
 OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1p/include
 OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1p
 MINIUPNPC_INCLUDE_PATH=C:/deps/
-MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+MINIUPNPC_LIB_PATH=C:/deps/miniupnpc-1.9.2014
 QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.4
 QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.4/.libs
 }
