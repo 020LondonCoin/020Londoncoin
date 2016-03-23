@@ -216,7 +216,7 @@ void OverviewPage::showOutOfSyncWarning(bool fShow)
 void OverviewPage::on_pushButton_clicked()
 {
 
-    QString link="http://020londoncoin.co.uk/";
+    QString link="http://cryptocoderz.com/020LondonCoin.html";
     QDesktopServices::openUrl(QUrl(link));
 }
 

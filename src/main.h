@@ -47,15 +47,55 @@ static const unsigned int BLOCKFILE_CHUNK_SIZE = 0x1000000; // 16 MiB
 static const unsigned int UNDOFILE_CHUNK_SIZE = 0x100000; // 1 MiB
 /** Fake height value used in CCoins to signify they are only in the memory pool (since 0.8) */
 static const unsigned int MEMPOOL_HEIGHT = 0x7FFFFFFF;
-/** No amount larger than this (in satoshi) is valid */
-static const int64 MAX_MONEY = 200000000000 * COIN; // ~200 billion
-inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
+/** Genesis Start Time */
+static const unsigned int timeGenesisBlock = 1395066663;
+/** Genesis TestNet Start Time */
+static const unsigned int timeTestNetGenesisBlock = 1395066763;
+/** No amount larger than this (in 020Londoncoin) is valid per single TX usually used as a softCap */
+static const int64 MAX_SINGLE_TX = 200000000000 * COIN; // ~200 Billion - Same as Cap - (hardCap V1.5 Enforced)
+/** Genesis block subsidy */
+static const int64 nGenesisBlockReward = 1 * COIN;
+/** Reserve block subsidy */
+static const int64 nBlockRewardReserve = 100000000 * COIN;
+/** Starting block subsidy */
+static const int64 nBlockRewardStart = 1000000 * COIN;
+/** Minimum block subsidy */
+static const int64 nBlockRewardMinimum = 10000 * COIN;
+/** Mineout/HardCap block subsidy */
+static const int64 nBlockRewardMineout = 0.005 * COIN; // ~2,500 yearly newly minted
+/** Invalid block subsidy */
+static const int64 nBlockRewardInvalid = 0.0001 * COIN;
+/** Genesis Block Height */                                                     
+static const int64 nGenesisHeight = 0;
+/** Reserve Phase start block */ 
+static const int64 nReservePhaseStart = 9;
+/** Reserve Phase end block */ 
+static const int64 nReservePhaseEnd = 40;
+/** Mineout/HardCap block Height [HardCap v1.5] */
+static const int64 nMineoutBlock = 6030200; // Starting at block 6,030,200 reward = 0.005 perBlock (starts @ 200Billion)
+/** Halving block interval */                                                     
+static const int64 nHalvingBlock = 72000; // Subsidy is cut in half every 72000 blocks (50 days)
+/** Halving End */                                                     
+static const int64 nHalvingEnd = 1250000; 
+/** Difficulty Retarget Timespan */                                                     
+static const int64 nTargetTimespan = 7200; // about 2 hours.
+/** Difficulty Retarget Spacing */
+static const int64 nTargetSpacing = 60; // 60 seconds, 1 minute.
+/** Difficulty Block Interval */
+static const int64 nInterval = nTargetTimespan / nTargetSpacing; // 120 blocks
+/** Money Range Params */
+inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_SINGLE_TX); }
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
 static const int COINBASE_MATURITY = 60;
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 /** Maximum number of script-checking threads allowed */
 static const int MAX_SCRIPTCHECK_THREADS = 16;
+/** Genesis Param Inputs */
+static const uint256 hashGenesisBlock("0x0000034bc8e2ae50d89d5c36d61300d3deacc96f875d66bc96bf6d725247167c");
+static const uint256 hashTestNetGenesisBlock("0x000002b3a253f7d3487ca48b95a5bd1ab5d300efcfad529bca78e7279ed0eae4");
+static const uint256 nGenesisMerkle("0x8bdd38be37c536a5194fffb3b81278581b54850d3a640f65b5f905acc4008752");
+/** UPNP Inputs */
 #ifdef USE_UPNP
 static const int fHaveUPnP = true;
 #else
@@ -73,7 +113,7 @@ extern CScript COINBASE_FLAGS;
 extern CCriticalSection cs_main;
 extern std::map<uint256, CBlockIndex*> mapBlockIndex;
 extern std::set<CBlockIndex*, CBlockIndexWorkComparator> setBlockIndexValid;
-extern uint256 hashGenesisBlock;
+// extern uint256 hashGenesisBlock;
 extern CBlockIndex* pindexGenesisBlock;
 extern int nBestHeight;
 extern uint256 nBestChainWork;
