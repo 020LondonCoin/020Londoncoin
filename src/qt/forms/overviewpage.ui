@@ -26,7 +26,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(62, 62, 62);</string>
+   <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="topLayout">
    <item>
@@ -51,9 +51,6 @@
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QFrame" name="frame">
-         <property name="styleSheet">
-          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.465909 rgba(247, 247, 247, 255), stop:1 rgba(255, 255, 255, 255));</string>
-         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -89,9 +86,6 @@
           </item>
           <item row="1" column="1">
            <widget class="QLabel" name="label_wallet_bgcoin">
-            <property name="styleSheet">
-             <string notr="true">QListView { background: transparent; }</string>
-            </property>
             <property name="text">
              <string/>
             </property>
@@ -142,9 +136,6 @@
      </item>
      <item>
       <widget class="QFrame" name="frame_3">
-       <property name="styleSheet">
-        <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.465909 rgba(247, 247, 247, 255), stop:1 rgba(255, 255, 255, 255));</string>
-       </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
        </property>
@@ -162,9 +153,6 @@
               <bold>true</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true">color: rgb(91, 91, 91);</string>
-            </property>
             <property name="text">
              <string>Theme Changer</string>
             </property>
@@ -176,7 +164,7 @@
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(255, 65, 68);</string>
+             <string notr="true">color: rgb(255, 0, 4);</string>
             </property>
             <property name="text">
              <string>(BETA)</string>
@@ -197,8 +185,9 @@
            <cursorShape>PointingHandCursor</cursorShape>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(236, 236, 236, 255), stop:1 rgba(255, 255, 255, 255));
-color: rgb(77, 77, 77);</string>
+           <string notr="true">background-color: rgb(34, 34, 34);
+selection-background-color: rgb(0, 85, 127);
+color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
            <string>Cryptopia Exchange</string>
@@ -225,8 +214,9 @@ color: rgb(77, 77, 77);</string>
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(236, 236, 236, 255), stop:1 rgba(255, 255, 255, 255));
-color: rgb(77, 77, 77);</string>
+             <string notr="true">background-color: rgb(34, 34, 34);
+selection-background-color: rgb(0, 85, 127);
+color: rgb(255, 255, 255);</string>
             </property>
             <property name="text">
              <string>LondonCoin</string>
@@ -251,8 +241,9 @@ color: rgb(77, 77, 77);</string>
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(236, 236, 236, 255), stop:1 rgba(255, 255, 255, 255));
-color: rgb(77, 77, 77);</string>
+             <string notr="true">background-color: rgb(34, 34, 34);
+selection-background-color: rgb(0, 85, 127);
+color: rgb(255, 255, 255);</string>
             </property>
             <property name="text">
              <string>Classic</string>
@@ -276,8 +267,9 @@ color: rgb(77, 77, 77);</string>
            <cursorShape>PointingHandCursor</cursorShape>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(236, 236, 236, 255), stop:1 rgba(255, 255, 255, 255));
-color: rgb(77, 77, 77);</string>
+           <string notr="true">background-color: rgb(34, 34, 34);
+selection-background-color: rgb(0, 85, 127);
+color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
            <string>BitcoinTalk Thread</string>
@@ -294,9 +286,6 @@ color: rgb(77, 77, 77);</string>
               <bold>true</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true">color: rgb(91, 91, 91);</string>
-            </property>
             <property name="text">
              <string>Wallet</string>
             </property>
@@ -308,7 +297,7 @@ color: rgb(77, 77, 77);</string>
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The displayed information may be out of date. Your wallet automatically synchronizes with the 020londoncoin network after a connection is established, but this process has not completed yet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(255, 65, 68);</string>
+             <string notr="true">QLabel { color: red; }</string>
             </property>
             <property name="text">
              <string notr="true">(out of sync)</string>
@@ -348,8 +337,10 @@ color: rgb(77, 77, 77);</string>
            <bool>false</bool>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(236, 236, 236, 255), stop:1 rgba(255, 255, 255, 255));
-color: rgb(77, 77, 77);</string>
+           <string notr="true">background-color: rgb(34, 34, 34);
+selection-color: rgb(0, 85, 127);
+selection-background-color: rgb(0, 85, 127);
+color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
            <string>Official Site</string>
@@ -363,9 +354,6 @@ color: rgb(77, 77, 77);</string>
             <weight>75</weight>
             <bold>true</bold>
            </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(91, 91, 91);</string>
           </property>
           <property name="text">
            <string>Resources</string>
@@ -382,9 +370,6 @@ color: rgb(77, 77, 77);</string>
           </property>
           <item row="0" column="0">
            <widget class="QLabel" name="label">
-            <property name="styleSheet">
-             <string notr="true">color: rgb(91, 91, 91);</string>
-            </property>
             <property name="text">
              <string>Balance:</string>
             </property>
@@ -404,9 +389,6 @@ color: rgb(77, 77, 77);</string>
             <property name="toolTip">
              <string>Your current balance</string>
             </property>
-            <property name="styleSheet">
-             <string notr="true">color: rgb(91, 91, 91);</string>
-            </property>
             <property name="text">
              <string notr="true">0 QRK</string>
             </property>
@@ -417,9 +399,6 @@ color: rgb(77, 77, 77);</string>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_3">
-            <property name="styleSheet">
-             <string notr="true">color: rgb(91, 91, 91);</string>
-            </property>
             <property name="text">
              <string>Unconfirmed:</string>
             </property>
@@ -439,9 +418,6 @@ color: rgb(77, 77, 77);</string>
             <property name="toolTip">
              <string>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</string>
             </property>
-            <property name="styleSheet">
-             <string notr="true">color: rgb(91, 91, 91);</string>
-            </property>
             <property name="text">
              <string notr="true">0 QRK</string>
             </property>
@@ -452,9 +428,6 @@ color: rgb(77, 77, 77);</string>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="labelImmatureText">
-            <property name="styleSheet">
-             <string notr="true">color: rgb(91, 91, 91);</string>
-            </property>
             <property name="text">
              <string>Immature:</string>
             </property>
@@ -470,9 +443,6 @@ color: rgb(77, 77, 77);</string>
             </property>
             <property name="toolTip">
              <string>Mined balance that has not yet matured</string>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">color: rgb(91, 91, 91);</string>
             </property>
             <property name="text">
              <string notr="true">0 QRK</string>
@@ -496,8 +466,9 @@ color: rgb(77, 77, 77);</string>
            <cursorShape>PointingHandCursor</cursorShape>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(236, 236, 236, 255), stop:1 rgba(255, 255, 255, 255));
-color: rgb(77, 77, 77);</string>
+           <string notr="true">background-color: rgb(34, 34, 34);
+selection-background-color: rgb(0, 85, 127);
+color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
            <string>Block Explorer / Richlist</string>
@@ -523,9 +494,6 @@ color: rgb(77, 77, 77);</string>
            <height>0</height>
           </size>
          </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.465909 rgba(247, 247, 247, 255), stop:1 rgba(255, 255, 255, 255));</string>
-         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -537,9 +505,6 @@ color: rgb(77, 77, 77);</string>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
             <item>
              <widget class="QLabel" name="label_4">
-              <property name="styleSheet">
-               <string notr="true">color: rgb(91, 91, 91);</string>
-              </property>
               <property name="text">
                <string>&lt;b&gt;Recent transactions&lt;/b&gt;</string>
               </property>
@@ -551,7 +516,7 @@ color: rgb(77, 77, 77);</string>
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The displayed information may be out of date. Your wallet automatically synchronizes with the 020londoncoin network after a connection is established, but this process has not completed yet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="styleSheet">
-               <string notr="true">color: rgb(255, 65, 68);</string>
+               <string notr="true">QLabel { color: red; }</string>
               </property>
               <property name="text">
                <string notr="true">(out of sync)</string>

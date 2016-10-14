@@ -1,9 +1,9 @@
-Building 020Londoncoin
+Building Bitcoin
 
-See doc/readme-qt.rst for instructions on building 020Londoncoin-Qt,
+See doc/readme-qt.rst for instructions on building Bitcoin-Qt,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of 020Londoncoin.
+implementation of Bitcoin.
 
 See doc/build-*.txt for instructions on building bitcoind,
 the intended-for-services, no-graphical-interface, reference
-implementation of 020Londoncoin.
+implementation of Bitcoin.

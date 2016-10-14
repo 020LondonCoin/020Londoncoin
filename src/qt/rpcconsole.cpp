@@ -298,15 +298,15 @@ void RPCConsole::clear()
 
     // Set default style sheet
     ui->messagesWidget->document()->setDefaultStyleSheet(
-                "table { background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(236, 236, 236, 255), stop:1 rgba(255, 255, 255, 255)); color: rgb(77, 77, 77); } "
+                "table { }"
                 "td.time { color: #808080; padding-top: 3px; } "
                 "td.message { font-family: Monospace; font-size: 12px; } "
-                "td.cmd-request { color: #72e1ff; } "
+                "td.cmd-request { color: #006060; } "
                 "td.cmd-error { color: red; } "
-                "b { color: #72e1ff; } "
+                "b { color: #006060; } "
                 );
 
-    message(CMD_REPLY, (tr("Welcome to the 020Londoncoin RPC console.") + "<br>" +
+    message(CMD_REPLY, (tr("Welcome to the 020londoncoin RPC console.") + "<br>" +
                         tr("Use up and down arrows to navigate history, and <b>Ctrl-L</b> to clear screen.") + "<br>" +
                         tr("Type <b>help</b> for an overview of available commands.")), true);
 }
