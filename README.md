@@ -3,7 +3,7 @@
 
 Copyright (c) 2009-2013 Bitcoin Developers
 Copyright (c) 2013-2014 o2oCoin Developers
-Copyright (c) 2015 020LondonCoin Developers
+Copyright (c) 2015-2022 020LondonCoin Developers
 
 Distributed under the MIT/X11 software license, see the accompanying
 file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -29,5 +29,5 @@ You need the Qt5.3.2 run-time libraries to run 020londoncoin-Qt. On Debian or Ub
 
 Other Pages
 ---------------------
-- http://020Londoncoin.co.uk/ [Downloads and Resources]
+- COMING SOON [Downloads and Resources]
 
